@@ -13,14 +13,9 @@ Document history:
     * Integrating comments from the team on this document, plus Bernhard Frey’s initial comments ([commented document Kopie here](https://docs.google.com/document/d/1kGWEYuml9vaMx-CYfWSm8SlUFifaXGKpAV7oMJ-0CUI/edit)). 
     * Many comments were left in for further team discussion. partners
     * Decision was made to create a “White Paper” / Business Plan for outside consumption
-
-
-
-
-# Contents
-
-
-[TOC]
+ * v1.2 Grace Rachmany, July 1, 2025
+    * Includes updates from Use Cases developed with team (Geoff Turk, Oli Sylvester-Braun, Kaliya Young)
+    * Moved from private repository to the public Sideways Repository
 
 
 
