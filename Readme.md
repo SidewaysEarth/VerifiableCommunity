@@ -496,111 +496,80 @@ The Verifiable Community puts identity where it belongs: in the hands of the ind
 * Decentralization: At each level of implementation, the system will offer the ability for multiple “authorities”, with no centralizing function. Any entity can define “good standing”. Any entity can decide what credentials to accept. Any entity can issue a registry of valid credentials. Individuals and entities can decide how to store and when to display credentials. The only centralized function is the protocol itself. The protocol will continue to be defined and developed by the users of the Verifiable Community, and it is the intention of the founders to provide a DAO-like structure for participation of all members in the decisions that affect the protocol.
 * Sovereignty and value-agnosticism: Individuals can use their credentials as they like. Issuers can issue and revoke credentials as they like. Validators can accept credentials as they like and use whatever registries align with their own values. Each entity is sovereign. All entities can offer paid or free services.
 
-<!-----
+
+## 1. As a group member I want to: {#1-as-a-group-member-i-want-to}
+
+
+### Receive my first VC (download wallet app)
 
 
 
-Conversion time: 0.73 seconds.
+1. Members receive an email or link that they have a new VC and they are prompted to download the wallet app if they haven't already.
+2. When they download the app, they are prompted to: 
+    1. Choose their user name and profile picture.
+    2. Record or write down a 24-word seed phrase and then retype it on a new screen to confirm they recorded it.
+    3. Confirm that they are 100% responsible for keeping an encrypted backup of app metadata that can be restored by the app. They are advised to have multiple backups. Options could include:
+        1. Hard drive backup
+        2. Cloud drive backup
+        3. Multiple app instances (on computer and on phone)
+        4. Local phone backup
+    4. The participant proves they have a backup that can be restored with the authentication method and user name chosen. 
+3. The initial VC is then added to the app.
+    5. How this is done depends on whether the action is online or offline. The admins must somehow generate and give unique tokens to members so they can register a public key with the group's server.
+    6. The app sends the public key and the group server generates a VC for that key and sends it back to the user's wallet (the app).
 
 
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β44
-* Wed Apr 30 2025 08:16:15 GMT-0700 (PDT)
-* Source doc: Copy of User Stories - Verifiable Communities
------>
-
-
-
-# User Stories for a Verifiable Communities Group Hub
-
-These are the main functions for a VeCo group hub:
+### Receive additional VCs
 
 
 
-1. Configuring the verifiable credentials (VCs) to be issued
-2. Assigning VCs to members to prove their membership status
-    1. Uploading a list of members
-    2. Adding a single member
-    3. Approving members via multi-sig (*m* of *n* admin approvals)
-3. Collecting and displaying memberships
-    4. Receiving my first VC (download app)
-    5. Applying for a VC (send an email asking for my membership card to be sent to me) or ask the admins I know to approve my VC membership
-    6. Displaying my VCs to someone who asks for them (selective disclosure)
-    7. Saving a backup of my VCs in a safe way
+1. Members receive an email or link that they have a new VC.
+2. Members can accept or reject the VC.
+3. If they accept the VC, it is added to their wallet app.
 
 
-## 1. As a group member I want to:
+### Apply for a VC or ask the admins I know to approve my VC membership {#apply-for-a-vc-or-ask-the-admins-i-know-to-approve-my-vc-membership}
 
-
-### Receive my first VC (download app)
+For the initial release of the app, requesting membership cannot be done within the app because the app cannot list all of the memberships available in the network. Over time, it may be able to interface with registries or have some other way of allowing people to find organizations.
 
 
 
-1. Member receives an email or link that they have a new VC and they are prompted to download the app.
-2. When they download the app, the initial VC is in the app.
-3. The member is prompted to configure their application, including creating backups of credentials.
+1. If a member did not receive a VC and they think they should get membership, they can make a request outside of the app for membership or membership upgrades if they know the email of an administrator for that organization.
+2. The admin logs that request in the system with a note about why they should be added (or not).
+3. All pending requests are shown in the weekly notification email sent to all admins, until it is either accepted or rejected by the other admins. Rejections must include a reason.
+4. If it is rejected, the participant is notified outside of the app along with the reasons for rejection.
+5. If a participant has made 3 requests for membership within 6 months and been rejected each time, they cannot keep making requests to that organization (offline process).
 
 
-### Receive VC
-
-
-
-4. Member receives an email or link that they have a new VC.
-5. Member can accept or reject the VC.
-6. If they accept the VC, it is added to their app.
-
-
-### Apply for a VC or ask the admins I know to approve my VC membership
+### Display my VCs to someone who asks for them (selective disclosure) {#display-my-vcs-to-someone-who-asks-for-them-selective-disclosure}
 
 
 
-1. If a member did not receive a VC and they think they should get membership, they can make a request in the app for membership or membership upgrades if they know the email of an administrator for that organization. 
-2. When someone sends a request within the app, the email request reaches the destination admin AND the request shows in the weekly notification email of all admins, until it is either accepted or rejected by an admin. Rejections must include a reason.
-3. If it is rejected, the participant is notified in the app or by email along with the reasons for rejection.
-4. If a participant has made 3 requests for membership within 6 months and been rejected each time, they cannot keep making requests to that organization.
+1. In the app, members see a searchable list of all their credentials. 
+2. They then select the credentials to display or transmit to the requesting Verifier.
+3. The Verifier receives the credentials and validates them. This could be initiated with a QR code when the VC holder and verifier are in the same physical space (or even over a video call) or online with a unique link or or code that can be pasted into a form.
 
 
-### Display my VCs to someone who asks for them (selective disclosure)
-
-
-
-1. In the app, the member sees a searchable list of all their credentials. 
-2. The member selects the credentials to display or transmit to the requesting Verifier.
-3. The Verifier receives the credentials visually and can digitally validate them with (I know this shouldn’t be a QR code… how should it be done? I don’t think we have Verifier software, do we?)
-4. The member chooses their secure login capabilities in case the device malfunctions. (What should we use? Seed phrase? Biometrics? MFA?)
-5. We should use best practices based on crypto wallets (forcing them to re-enter seed phrase words to make sure they really wrote it down, etc.)
-
-Future versions might use social logins to prove that a person is really who they say they are.
-
-
-### Save a backup of my credentials in a safe way
+### Save a backup of my credentials in a safe way {#save-a-backup-of-my-credentials-in-a-safe-way}
 
 
 
 1. During the initial setup or at any time, the member is prompted to keep a backup of their credentials.
 2. The backup is saved as an encrypted file for safety.
-3. The member can save to a hard drive (external or internal), or to their Google Drive or Apple cloud.
+3. The member can save to a hard drive (external or internal), IPFS (decentralized storage) or to a cloud provider.
 
-Future versions will allow IPFS or other types of decentralized storage options.
-
-
-### Access my credentials from another device (restore credentials)
-
-Participants should be able to restore their credentials from their backup on the app using their secure seed phrase, MFA or other methodology.
+Future versions should have an automatic encrypted backup option for users so they don’t have to worry about storing the app metadata themselves.
 
 
-## 2. As a group multi-sig admin I want to
+### Access my credentials from another device (restore credentials) {#access-my-credentials-from-another-device-restore-credentials}
+
+Members should be able to restore their credentials on another device using their secure seed phrase and the encrypted backup of their wallet app data.
 
 
-### Configure the system for the types of memberships available
+## 2. As a group multi-sig admin I want to: {#2-as-a-group-multi-sig-admin-i-want-to}
+
+
+### Configure the system for the types of memberships available {#configure-the-system-for-the-types-of-memberships-available}
 
 The initial configuration of the app will be done in coordination with the group team. The team will indicate the members of the core team (trusted members) who will all be issued “Trusted Member” VCs as they are added. 
 
@@ -609,14 +578,32 @@ The team will agree upon the *m* of *n* requirements for approving the VC defini
 
 
 1. After login, the initial configurator sees the definition of Trusted Member the 3 levels of VCs they can define (Provisional Member, Member in Good Standing, Trusted Member). They choose the member status they want to define.
+
+    
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](images/image1.png "image_tooltip")
+
+
 2. The admin adds an image (optional) and a description (required) of the meaning of the VC. 
-3. The admin adds the requirements for approving that type of VC. If the admin allows members to approve or nominate other members, those members will also get admin interfaces.
+
+    
+
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](images/image2.png "image_tooltip")
+
+
+3. The admin adds the requirements for approving that type of VC. If the admin allows specific members to approve or nominate other members, those members will also have admin privileges to invite and accept new members.
 4. The admin repeats this process for all 3 VCs (optional). At least one VC needs to be defined, but it is not required to have all 3 levels. Future versions will allow organizations to define custom VCs.
 
 The VC definitions must be approved based on the requirements initially for *m* of *n*, so the list of VC types is sent to all other admins for approval based on the initial requirements.
 
 
-### Add new members
+### Add new members {#add-new-members}
 
 
 
@@ -630,22 +617,22 @@ The VC definitions must be approved based on the requirements initially for *m* 
     6. Link (this can be used for anything (such as LinkedIn profile, membership application form, whatever the admins want)
     7. Text field (can be used for anything)
 3. If the users are uploaded from a file, the admin reviews the file and can delete users before approving the list.
-4. After uploading or adding, the admin  clicks “Add” to approve the addition.
+4. After uploading or adding, the admin clicks “Add” to approve the addition.
 5. A notification shows saying the approval is pending (X) additional administrators, if relevant.
 
 
-### Approve of members that were added by other members
+### Approve members that were added by other members
 
 
 
 1. Admins receive daily notifications if there are members they need to approve (or members who should have credentials revoked or upgraded).
-2. On the approval page, the admin sees a list of the members for approval (or revocation/upgrade/downgrade), with the username, email, and other information about the members to be approved.
+2. On the approval page, the admin sees a list of the members for approval (or revocation/upgrade/downgrade), with the username, email, and other information about the members to be approved/modified.
 3. Admins can check multiple or all members, or approve individual members one by one.
-4. If an admin rejects a request, they can add a note as to why they have rejected the application. That rejection notification is added to the table seen by other admins (with attribution) and can be marked so it can be seen by the member if they are rejected. If the application receives the quorum number of rejections before they reach quorum for approval, their membership is rejected. The rejection reasons approved by the admins can be seen, without attribution, by the individual who is rejected for membership. 
+4. If an admin rejects a request, they can add a note as to why they have rejected the application. That rejection notification is added to the table seen by other admins (with attribution) and can be marked so it can be seen by the member if they are rejected. If the application receives the quorum number of rejections before admins reach quorum for approval, the membership is rejected. The rejection reasons approved by the admins can be seen, without attribution, by the individual who is rejected for membership. 
 5. If an admin approves a member who does not have emails, they are given the prompt to send a link to the member. 
 
 
-### Notify member of their VC 
+### Notify member of their VC  {#notify-member-of-their-vc}
 
 
 
@@ -654,7 +641,7 @@ The VC definitions must be approved based on the requirements initially for *m* 
 3. When the admin logs in, they see the list of members who do not have emails and have not claimed their VC. They can “copy link” and send it to the member via any electronic method they want.
 
 
-### Revoke membership, upgrade or downgrade (from provisional to full member, for example)
+### Revoke membership, upgrade or downgrade (from provisional to full member, for example) {#revoke-membership-upgrade-or-downgrade-from-provisional-to-full-member-for-example}
 
 
 
@@ -663,59 +650,38 @@ The VC definitions must be approved based on the requirements initially for *m* 
 3. If someone is upgraded, their previous VC does not need to be revoked.
 4. If someone is downgraded, their VC must be revoked.
 
-## KERI technology
 
-The basis for self-sovereign identity is the Digital Identifier (DID) and Verifiable Credential (VC) technology defined by the W3C. These have been significantly advanced by the [KERI Framework](https://keri.one/) which allows people to issue their DID and use a more advanced credential type called Authentic Chained Data Containers (ACDC). It is beyond the scope of this paper to do a deep dive into this technology. The design principles align with the needs of the Verifiable Community, and it is our intention to implement KERI for this system.
-
-Repo w/ KERI implementations: [https://github.com/WebOfTrust/keri](https://github.com/WebOfTrust/keri)
+## 3. As a verifier I want to:
 
 
-## GLEIF identifiers
-
-[https://www.gleif.org/en](https://www.gleif.org/en)
-
-
-## Others to consider
+### Check that someone has appropriate access to the resource in physical space. {#check-that-someone-has-appropriate-access-to-the-resource-in-physical-space}
 
 
 
-* Holochain (*not sure the tech is mature enough, but worth discussing / investigating)
-    * Following discussion: They probably won’t be ready for at least 6-12 months
-    * Holochain does have a team working on identity and using similar architecture, but it’s not on the top of their priority list
-* Privado.id [https://www.privado.id/](https://www.privado.id/) (not heard great things about Polygon but Disco is partnering with them)
-    * API reference: [https://self-hosted-platform.polygonid.me/#overview](https://self-hosted-platform.polygonid.me/#overview)
-    * Tryout: [https://docs.privado.id/docs/quick-start-demo](https://docs.privado.id/docs/quick-start-demo)
-    * Main questions for Privado (when we are ready to meet with them
-        * How agnostic are they to the underlying tech (blockchain, storage, etc)?
-        * How could we implement the registry system?
-        * How can we implement privacy in a way that meets our requirements.
-* [https://github.com/undp/Regi-TRUST](https://github.com/undp/Regi-TRUST)
-* [https://docs.walt.id/home](https://docs.walt.id/home)
-* [https://www.hypercerts.org/](https://www.hypercerts.org/)
-* [https://infocert.digital/](https://infocert.digital/)
+1. The participant steps up to the physical location and scans or taps their app (either with an attendant holding another app on their phone or a hardware device).
+2. The app shows the participant which of the credentials are valid for access to the location and lets them know whether a ZK proof or the actual certificate will be shown. Other conditions might be shown, for example, how long the permission is granted. One VC might give you 1 hour of parking but the other VC gives you 3 hours.
+3. The participant chooses the VC or VCs they want to use to access the privilege. For some services you might need multiple VCs. 
+4. The service is unlocked (gate opens, bicycle is freed from its lock, etc.)
 
-Other (ID) solutions, likely not interesting for VeCo
+
+### Check that someone has appropriate access to the resource in a digital commons. {#check-that-someone-has-appropriate-access-to-the-resource-in-a-digital-commons}
 
 
 
-* https://www.spherity.com/
-* [https://identity.foundation/decentralized-web-node/spec/](https://identity.foundation/decentralized-web-node/spec/)
-* 
+1. The participant logs in with their wallet DID (no exposure of VCs). 
+2. The app shows the participant which of the credentials are valid for and lets them know whether a ZK proof or the actual certificate will be shown. The Verifier can display different conditions, for example, they might be explicit about the fact that you get different or better content with more VCs, or they might not.
+3. The participant chooses the VC or VCs they want to use to access the privilege. 
+4. The service is unlocked. In the case of the digital service, you don’t see all the “gates”. A web service could show completely different content based on the VC you show. 
 
 
-## FedID
-
-[https://docs.google.com/document/d/1BWptWeVSJaZLDKoaVQll0JgVLPCBGYX79qOLnGSRgnE/edit?tab=t.0](https://docs.google.com/document/d/1BWptWeVSJaZLDKoaVQll0JgVLPCBGYX79qOLnGSRgnE/edit)
-
-[https://www.fedid.me/about/](https://www.fedid.me/about/)
-
-
-## Integration systems
+### Future: Provide a customized output or access based on the permissions shown in the wallet. (For example, a map with locations that accept the credentials held/chosen by the member.)
 
 
 
-* [https://murmurations.network/software/](https://murmurations.network/software/)
-* 
+1. The participant logs in with their wallet DID (no exposure of VCs). 
+2. The app asks the participant which VCs are relevant to the content they are looking for at this time.
+3. The participant chooses the VC or VCs they want to use to access the privilege. 
+4. The output given by the service is customized based on the permissions and preferences shown by the certificates. 
 
 
 # Potential risks and potential mitigations
