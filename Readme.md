@@ -16,9 +16,7 @@ Document history:
  * v1.2 Grace Rachmany, July 1, 2025
     * Includes updates from Use Cases developed with team (Geoff Turk, Oli Sylvester-Braun, Kaliya Young)
     * Moved from private repository to the public Sideways Repository
-
-
-
+    * Added cute diagrams and sketchy mockups
 
 
 # Executive Summary
@@ -27,7 +25,7 @@ Challenge: how to create trust in a decentralized system
 
 Hypothesis: by having certifying entities that vouch for individuals, and take on group responsibility for the individuals’ behavior. Vouching entities can impose consequences on individuals and therefore can vouch for their good standing.
 
-
+![Registry Setup](11AnyoneCanBeARegistry.png)
 
 
 
@@ -87,7 +85,7 @@ For context: While Sideways is mainly concerned with IRL human interactions and 
 **Organizational Challenge: **How can an organization maintain and evolve cultural norms and ensure that members continue to represent those cultural norms consistently? The approach taken in this paper sees the organization as the basic unit of human functioning, and allows each organization to maintain its own standards. An organization is any group of 3 or more people operating under a recognizable name. A network or ecosystem is a collaboration among multiple groups. 
 ![Comparison Gaps Network Membership](https://drive.google.com/file/d/1y283OG7lAUJsgZVd2RDjAghKnjTpo8wJ/view?usp=drive_link)
 
-
+![Comparison Table](VerCom-ComparisonTable.png)
 
 ## Mathematicians of the Empire
 
@@ -317,14 +315,14 @@ The system outlined in this document separates these processes so that the contr
 
 On the first level, it’s easy to imagine this system as an app like the pay application on your mobile phone. 
 
-![PaymentApp](https://drive.google.com/file/d/1JBtZeoMA377zYupBEK0wXLh9MYYwzWtt/view?usp=drive_link)
+![PaymentApp](1IssuerVerifier.png)
 
 
 Your app has the details of your bank or credit card. The shop has a point of sale system which knows how to read the credit card, and you approve the purchase. In this system, we would say the bank is the “Issuer” and the shop is a “Verifier”. You are the person in control of the interaction. You could choose a different credit card, for example. Notice also that the Verifier, the shop, can decide that they take cash only. The Verifier has the “access” that you want, and they ultimately can decide what types of money are good at their shop.
 
 An example closer to the identification system described here is the one below, where you get a university degree.
 
-![UniversityDegreeIssuance](https://drive.google.com/file/d/18n55CIwN2f3Jv9mT9FbE7WJYrGciCaSZ/view?usp=drive_link)
+![UniversityDegreeIssuance](2IssuerVerifier.png)
 
 The university issues the degree, let’s say it’s an architecture certification. When you apply for the job, you show the degree. The employer decides whether they trust the certification for that job. Already you can see there are two components the Verifier is considering: the type of degree and the quality of the university. The university (Issuer) needs to maintain its reputation for the degree to be worth having. This is why you can say something like “A Harvard degree doesn’t mean what it used to mean.” 
 
@@ -332,17 +330,17 @@ Once you understand this architecture, you can see it anywhere you show any type
 
 You might notice that there’s another entity in many of these cases, and we call that entity the Registry. For academic institutions, there are entities (usually government ministries) which issue a list of “Accredited” universities. Similarly, governments may determine the authorized list of insurance companies. 
 
-![GenericIssuerRegistryVerifier](https://drive.google.com/file/d/1p1bmf83gGxcdlrqjX8VTlwnWruJNyTeZ/view?usp=drive_link)
+![GenericIssuerRegistryVerifier](3IssuerVerifierRegistry.png)
 
 It’s not always a government, for example, the International Shotokan Karate Federation (ISKF) gives a list of official dojos, so if you get a belt (another type of certification), and it is from one of the dojos on the list, that is a valid belt in that particular discipline. 
 
-![Registry](https://drive.google.com/file/d/1Ov0c8bMzf5pfRc4nwlFWkbzmjyCnhJkT/view?usp=drive_link)
+![Registry](4IssuerVerifierRegistry.png)
 
 The Verifier might know the Issuer, or they might not. The Verifier has to meet the qualifications to be on the Registry, and the Verifier can look at the registry to find out if the Issuer is a good one. Nobody gets to look at what I have in my hands unless I show it to them. 
 
 When it comes to “control” or “decentralization”, it is obvious that there can be any number of issuers. There are plenty of educational institutions that are not accredited (like the dojos). Anyone can create their own class and issue a certificate. Anyone can ask you to show a certificate. What is less obvious today is that the Registry can be decentralized. In the Karate example, it's decentralized because there are lots of "schools". I’m sure someone knows the difference between Shidokan and Shokotan and Karate-Do, and I’m sure they are very important distinctions even though they mean nothing to me. 
 
-![DojoRegistries](https://drive.google.com/file/d/1frGp0aQKl7aWIpYN-4mcZxSLhraeb1O8/view?usp=drive_link)
+![DojoRegistries](5Dojo.png)
 
 This might seem like a trivial example, but you can see how it applies to different certificates in an Verifiable Community system. Actually, you might already feel that the University Accreditation system is flawed and wish there were some other reliable source to know whether a degree is representative of a good education.  Different Network States, DAOs, and NGOs could be Issuers of identification certificates. They could also be Verifiers, and there could be many other Verifiers. Each Network State would have a different Registry they refer to when deciding what other certificates to accept. It's obvious that the Ecovillage Network and the Special Economic Zone networks feel very differently about what it means to be a "good" member organization, so they would each have their own Registries.
 
@@ -415,9 +413,9 @@ By default, Issuers are offered 3 types of credentials: Membership (In good stan
 
 
 
-* User: Administrator, or pre-configured with Sideways when onboarding the organization. Organizations should be able to define capabilities for administrators that require N of M permissions and multiple equal admins (decentralized organization capabilities). 
+* User: Administrator, or pre-configured with Sideways when onboarding the organization. Organizations should be able to define capabilities for administrators that require X of N permissions and multiple equal admins (decentralized organization capabilities). 
 
-![DefineCertificate](https://drive.google.com/file/d/1QcDOV6Hbn0SW0nTAEmihUM3o3gvdmV3W/view?usp=drive_link)
+![DefineCertificate](6CertificateDefinition.png)
 
 
 Examples (from [Use cases](#use-cases-10)) of the type of issuance and the issuance requirements:
@@ -428,7 +426,7 @@ Examples (from [Use cases](#use-cases-10)) of the type of issuance and the issua
 * Ecology Extreme issues Provisional Membership to anyone who participates in any of their civil disobedience actions. At each action, there is an on-site coordinator who provides a list of the public key identifiers of participants. Full EE Membership is issued to the core team, coordinators, and anyone who has been arrested or is deemed to be in danger based on their actions. However, EE also maintains a blacklist of individuals who are banned from membership of any kind. This includes anyone who has taken violent actions against living beings, violated the code of conduct against other EE members, or who has leaked secret information. There is a team of 40 authorized administrators who can upload lists of activists to the system for membership approval. At least 3 of the administrators must approve a list before membership is approved for those individuals on the list. EE also issues a Top-Secret credential which is not listed publicly, however a few of their anarchist partners know about this secret credential and honor it accordingly. 
 * Hippiati Commune issues a certificate of contribution to anyone who has volunteered for more than 3 months and had no issues of misconduct, a provisional membership certificate to people who have lived in the commune for 1 year, and full membership to full members, who typically are accepted after 3 years. Provisional membership is also sometimes used if someone is on probation because of misconduct that doesn’t warrant expulsion. Senior council members must unanimously approve any issuance or revocation of membership. The Volunteer coordinator can approve certificates of contribution with the approval of one senior council member.
 
-![AddMember](https://drive.google.com/file/d/1cZMq35UbfMCkhzuriLtTSpdsLLhxCLYM/view?usp=drive_link)
+![AddMember](7AddN ewMember.png)
 
 Note: The Verifiable Community protocol is agnostic to how organizations keep their own records. Member organizations might use real or fake names, use Google Docs for their members list, have a secret list or a public blockchain list, or use a piece of paper. It is not the business of the Verifiable Community protocol to dictate how any organization runs itself. The Validators and Registries might care about those things and provide access based on how they perceive another organization, but again, that is not the business of the Verifiable Community protocol. We just provide a communications network upon which aligned organizations can identify members of their partner organizations.
 
@@ -437,7 +435,7 @@ Note: The Verifiable Community protocol is agnostic to how organizations keep th
 
 Issuers have defined the rules that are required for approvals. Anyone who is authorized to approve someone for membership can enter the name of the person into the system to initiate the process as well as provide the first approval for the member or members they add. The system will also allow uploading of a list file for bulk approval.
 
-![ApproveMembers](https://drive.google.com/file/d/1PljQZhNz5mT0KWYx4Sj-1soDGWrB_wN7/view?usp=sharing)
+![ApproveMembers](8ApproveMembership.png)
 
 
 After adding the new member or performing a bulk upload, the person will either approve issuance of the certificate, decline, or abstain. It is possible that someone will have the job of uploading membership requests but not approve all of them. For example, if someone uploads a list of applicants for membership, but they can only vouch for the ones they know, they may not be in a position to give final approval for the certification.
@@ -462,7 +460,7 @@ Acceptance and validation of certificates will be possible on a customizable bas
 
 The process will be as follows:
 
-![ValidatorScenarios](https://drive.google.com/file/d/1qV51KYCZ3R_0dhw1Kepbr-nPX6-ux_6s/view?usp=drive_link)
+![ValidatorScenarios](9GrantPermissions.png)
 
 
 
