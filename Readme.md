@@ -2,7 +2,7 @@
 # Sideways Verifiable Community
 
 
-# Specifications Document v 1.0 (active version)
+# Specifications Document v 1.2 (active version)
 
 Document history: 
 
